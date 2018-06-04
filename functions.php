@@ -7,7 +7,7 @@ function task1($array = [], $bool = false)
         return $result;
     }
     foreach ($array as $value) {
-        echo "<p>$value";
+        echo "<p>$value</p>";
     }
 }
 
