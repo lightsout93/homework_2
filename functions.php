@@ -16,8 +16,8 @@ function task2()
     $operands = func_get_args();
     $operator = $operands[0];
     unset ($operands[0]);
-    $result = $operands[0];
-    unset ($operands[0]);
+    $result = $operands[1];
+    unset ($operands[1]);
     if ($operator == '/') {
         foreach ($operands as $value) {
             if ($value == 0) {
