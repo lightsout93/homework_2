@@ -1,8 +1,14 @@
 <?php
 $file = "text.txt";
+$text = 'Hello again!';
 if (!file_exists($file)) {
-    $fp = fopen($file, "w");
-    fclose($fp);
+    $result = file_put_contents($file, $text);
+    if ($result === false) {
+        echo 'Ошибка записи файла.';
+    } else {
+        echo 'Файл успешно записан.';
+    }
 } else {
-    echo 'Файл уже существует';
+    $result = file_get_contents($file);
+    echo 'Содержимое файла ' . $file .': ' . $result;
 }
